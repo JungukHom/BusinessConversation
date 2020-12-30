@@ -65,16 +65,12 @@
 
         private void OnOkButtonClicked()
         {
-            Debug.Log("OK");
-
             okCallback?.Invoke();
             Destroy(transform.gameObject);
         }
 
         private void OnCancelButtonClicked()
         {
-            Debug.Log("Cancel");
-
             cancelCallback?.Invoke();
             Destroy(transform.gameObject);
         }
