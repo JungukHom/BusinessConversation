@@ -10,7 +10,7 @@
     {
         private void Start()
         {
-            Screen.FadeIn(2.0f, 1.0f, () =>
+            Screen.FadeIn(1.0f, 1.0f, () =>
             {
                 StartCoroutine(WaitAndMoveScene(1.0f));
             });            
@@ -19,7 +19,7 @@
         private IEnumerator WaitAndMoveScene(float delay)
         {
             yield return new WaitForSeconds(delay);
-            Screen.FadeOut(2.0f, 1.0f, () =>
+            Screen.FadeOut(1.0f, 1.0f, () =>
             {
                 SceneLoader.LoadScene(SceneName._01_Title);
             });
