@@ -8,9 +8,6 @@
     using UnityEngine.UI;
     using UnityEngine.SceneManagement;
 
-    // Project
-    // Alias
-
     public class SceneLoader : MonoBehaviour
     {
         public Text progressText;

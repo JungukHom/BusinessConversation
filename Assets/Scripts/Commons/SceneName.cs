@@ -7,9 +7,6 @@
     // Unity
     using UnityEngine;
 
-    // Project
-    // Alias
-
     public class SceneName
     {
         public static readonly string _00_Splash = "00.Splash";

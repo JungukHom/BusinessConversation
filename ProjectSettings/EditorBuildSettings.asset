@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/00.Splash.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/01.Title.unity
+    guid: 2144f30609473124a9a0b2a57108ae38
+  - enabled: 1
+    path: Assets/Scenes/02.Menu.unity
+    guid: 4d678e7b2c2a87346a355afb882e3e07
+  - enabled: 1
+    path: Assets/Scenes/03.Study_Youtube.unity
+    guid: b20f5e7eb4003944fb705b2d6a4a4144
+  - enabled: 1
+    path: Assets/Scenes/04.Study_Read.unity
+    guid: b6fa4f0069a0727488f218ac79c23a81
+  - enabled: 1
+    path: Assets/Scenes/06.Quiz.unity
+    guid: b226f4f3b5b2e2447896b7ea10d1a982
+  - enabled: 1
+    path: Assets/Scenes/99.Loading.unity
+    guid: 243b0d0d71149a943aa7991d25efddfa
+  - enabled: 1
+    path: Assets/Scenes/00._Temp.unity
+    guid: 0ba66c3421b399a479b70a06ceae7fb9
   m_configObjects: {}
