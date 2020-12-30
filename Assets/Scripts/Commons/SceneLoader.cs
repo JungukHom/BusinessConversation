@@ -13,8 +13,8 @@
 
     public class SceneLoader : MonoBehaviour
     {
-        public Slider progressBar;
         public Text progressText;
+        public Image progressBarFill;
 
         private static string nextSceneName = "";
         private static readonly string LoadingSceneName = SceneName._99_Loading;
@@ -52,7 +52,7 @@
                 if (operation.progress < 0.9f)
                 {
                     loadingPrecent = Mathf.Lerp(loadingPrecent, operation.progress, timer);
-                    progressBar.value = loadingPrecent;
+                    progressBarFill.fillAmount = loadingPrecent;
                     progressText.text = $"{loadingPrecent * 100}%";
                     if (loadingPrecent >= operation.progress)
                     {
@@ -62,7 +62,7 @@
                 else
                 {
                     loadingPrecent = Mathf.Lerp(loadingPrecent, 1.0f, timer);
-                    progressBar.value = loadingPrecent;
+                    progressBarFill.fillAmount = loadingPrecent;
                     progressText.text = $"{loadingPrecent * 100}%";
                     if (loadingPrecent == 1.0f)
                     {
