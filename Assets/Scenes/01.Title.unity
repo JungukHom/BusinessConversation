@@ -936,7 +936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53527e3461b37aa4588b82e7ad8f29b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44a0a353e46ec624f9648e51566ff036, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1054,6 +1054,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas (PC)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798014610293789854, guid: 2c3fcca33dd8fd2458482103bc2e164b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7798014610293789855, guid: 2c3fcca33dd8fd2458482103bc2e164b,
         type: 3}

@@ -29,11 +29,11 @@
 
         protected void SetSortingLayerToHighest()
         {
-            int highest = 0;
-            Canvas[] canvasArray = GetComponents<Canvas>();
+            int highest = -1;
+            Canvas[] canvasArray = FindObjectsOfType<Canvas>();
             foreach (Canvas canvas in canvasArray)
             {
-                if (canvas.sortingOrder > highest)
+                if (canvas.sortingOrder > highest && canvas.sortingOrder != 999)
                 {
                     highest = canvas.sortingOrder;
                 }

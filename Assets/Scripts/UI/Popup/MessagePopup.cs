@@ -20,13 +20,12 @@
 
         private static readonly string PrefabPath = "Prefabs/Popups/MessagePopup";
 
-        private string contentText;
         private Action okCallback;
         private Action cancelCallback;
 
-        public static MessagePopup GetOrCreateInstance(string contentText, Action okCallback = null, Action cancelCallback = null)
+        public static MessagePopup Show(string contentText, Action okCallback = null, Action cancelCallback = null)
         {
-            GameObject prefab = Resources.Load(PrefabPath) as GameObject;
+            GameObject prefab = Instantiate(Resources.Load(PrefabPath) as GameObject);
             MessagePopup component = prefab.GetComponent<MessagePopup>();
             component.SetData(contentText, okCallback, cancelCallback);
 
@@ -36,6 +35,7 @@
         protected new void Awake()
         {
             base.Awake();
+
             Initialize();
         }
 
@@ -44,7 +44,7 @@
             base.Initialize();
 
             SetSortingLayerToHighest();
-            txt_content.text = contentText;
+            SetListeners();
         }
 
         protected new void SetListeners()
@@ -57,21 +57,26 @@
 
         private void SetData(string contentText, Action okCallback, Action cancelCallback)
         {
-            this.contentText = contentText;
             this.okCallback = okCallback;
             this.cancelCallback = cancelCallback;
+
+            txt_content.text = contentText;
         }
 
         private void OnOkButtonClicked()
         {
+            Debug.Log("OK");
+
             okCallback?.Invoke();
-            Destroy(this.gameObject);
+            Destroy(transform.gameObject);
         }
 
         private void OnCancelButtonClicked()
         {
+            Debug.Log("Cancel");
+
             cancelCallback?.Invoke();
-            Destroy(this.gameObject);
+            Destroy(transform.gameObject);
         }
     }
 }

@@ -37,6 +37,7 @@
         private void OnQuitButtonClicked()
         {
             // TODO : Show Popup
+            MessagePopup.Show("프로그램을 종료하시겠습니까?", () => { Application.Quit(); }, null);
         }
     }
 }
