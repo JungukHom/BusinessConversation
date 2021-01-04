@@ -6,6 +6,7 @@
 
     public class Popup : MonoBehaviour
     {
+        [Header("기본 버튼")]
         public Button btn_backgroundPannel;
         public Button btn_close;
 

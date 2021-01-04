@@ -27,5 +27,16 @@
         public static readonly string _06_Quiz = "06.Quiz";
 
         public static readonly string _99_Loading = "99.Loading";
+
+        public static string GetLessonStringWithIndex(int index)
+        {
+            if (index < 0 || index > 7)
+            {
+                index = 0;
+            }
+
+            index += 1;
+            return "05.Lesson_0" + index;
+        }
     }
 }
