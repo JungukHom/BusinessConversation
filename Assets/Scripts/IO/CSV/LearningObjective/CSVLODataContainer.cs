@@ -1,10 +1,10 @@
-﻿namespace RESC
+﻿namespace BusinessConversation.CHN.Hotel
 {
     // C#
     using System.Collections.Generic;
 
     // static
-    using static RESC.CSVLODataHeader;
+    using static BusinessConversation.CHN.Hotel.CSVLODataHeader;
 
     public class CSVLODataContainer : CSVDataContainer
     {

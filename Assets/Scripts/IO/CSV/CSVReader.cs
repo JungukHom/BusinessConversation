@@ -1,4 +1,4 @@
-﻿namespace RESC
+﻿namespace BusinessConversation.CHN.Hotel
 {
     // C#
     using System.Collections.Generic;

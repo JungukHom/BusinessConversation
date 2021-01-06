@@ -1,16 +1,12 @@
-﻿namespace RESC
+﻿namespace BusinessConversation.CHN.Hotel
 {
     // C#
-    using System.Collections;
     using System.Collections.Generic;
 
     // Unity
     using UnityEngine;
 
-    // Project
-    // Alias
-
-    using static RESC.CSVQuizMCDataHeader;
+    using static BusinessConversation.CHN.Hotel.CSVQuizMCDataHeader;
 
     public class CSVQuizMCDataContainer : CSVDataContainer
     {
