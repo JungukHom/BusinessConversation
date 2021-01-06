@@ -1,15 +1,11 @@
 ﻿namespace BusinessConversation.CHN.Hotel
 {
     // C#
-    using System.Collections;
     using System.Collections.Generic;
 
     // Unity
     using UnityEngine;
     using UnityEngine.UI;
-
-    // Project
-    // Alias
 
     public class _02_Menu : MonoBehaviour
     {
@@ -53,20 +49,20 @@
 
         private void SetListeners()
         {
-            for (int index = 0; index < btn_lessons.Length; index++)
+            foreach (Button button in btn_lessons)
             {
-                btn_lessons[index].onClick.AddListener(() => { OnLessonButtonClicked(index); });
+                button.onClick.AddListener(() => { OnLessonButtonClicked(button.name); });
             }
 
             btn_select_completed.onClick.AddListener(() => { OnSelectCompletedButtonClicked(); });
 
             btn_learning.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName._03_Study_Youtube); });
-            btn_experience.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName.GetLessonStringWithIndex(PlayingData.selectedLessonIndex), true); });
+            btn_experience.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName.GetLessonStringWithIndex(selectedLessonIndex), true); });
             btn_quiz.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName._06_Quiz); });
             btn_close_detailSelectPopup.onClick.AddListener(() => { OnDetailSelectPopupCloseButtonClicked(); });
         }
 
-        private void OnLessonButtonClicked(int index)
+        private void OnLessonButtonClicked(string buttonName)
         {
             if (selectedLessonIndex == -1) // if lesson is not selected
             {
@@ -75,14 +71,15 @@
             }
 
             ActiveSelectCompletedButton();
-            selectedLessonIndex = index;
+
+            string[] array = buttonName.Split('_');
+            selectedLessonIndex = int.Parse(array[array.Length - 1]) - 1;
 
             ShowLearningTargetData();
         }
 
         private void OnSelectCompletedButtonClicked()
         {
-            PlayingData.selectedLessonIndex = selectedLessonIndex;
             pnl_select_destination.gameObject.SetActive(true);
         }
 
@@ -93,9 +90,10 @@
 
         private void OnMoveSceneButtonClicked(string sceneName, bool async = false)
         {
-
             Screen.FadeOut(() =>
             {
+                PlayingData.selectedLessonIndex = selectedLessonIndex;
+
                 if (async)
                     SceneLoader.LoadSceneAsync(sceneName);
                 else
@@ -111,6 +109,18 @@
         private void ShowLearningTargetData()
         {
             DeactivateLearningTargetLists();
+
+            // load csv data
+            CSVLODataContainer container = CSVLODataContainer.GetOrCreateInstance();
+            List<CSVLODataHolder> list = container.GetData(ELocation.Hotel, (EHotelLesson)selectedLessonIndex);
+
+            txt_lesson.text = "Lesson 0" + (selectedLessonIndex + 1);
+            for (int i = 0; i < list.Count; i++)
+            {
+                CSVLODataHolder holder = list[i];
+                txt_learningTargets[i].gameObject.SetActive(true);
+                txt_learningTargets[i].text = holder.lo;
+            }
         }
 
         private void DeactivateLearningTargetLists()

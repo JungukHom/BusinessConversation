@@ -14,11 +14,10 @@
 
         private List<ButtonOutlineElement> outlineGroup;
 
-        private void Awake()
+        private void Start()
         {
             Initialize();
             SetListeners();
-            
         }
 
         private void SetListeners()

@@ -21,12 +21,33 @@ EditorBuildSettings:
     path: Assets/Scenes/04.Study_Read.unity
     guid: b6fa4f0069a0727488f218ac79c23a81
   - enabled: 1
+    path: Assets/Scenes/05.Lesson_01.unity
+    guid: 1cb75d595f0aec640b98fbb25a4cc883
+  - enabled: 1
+    path: Assets/Scenes/05.Lesson_02.unity
+    guid: 3ae9e68c75df23641bf576d703056140
+  - enabled: 1
+    path: Assets/Scenes/05.Lesson_03.unity
+    guid: 8b7ba5ea62cd7954ea74417eeb9d8c05
+  - enabled: 1
+    path: Assets/Scenes/05.Lesson_04.unity
+    guid: 5d68912fcf317aa408d18b53401e789f
+  - enabled: 1
+    path: Assets/Scenes/05.Lesson_05.unity
+    guid: a40f56cac49022c45aca1ae97c93dbf3
+  - enabled: 1
+    path: Assets/Scenes/05.Lesson_06.unity
+    guid: 2b48d4e0346dc7841ae63589085d465c
+  - enabled: 1
+    path: Assets/Scenes/05.Lesson_07.unity
+    guid: 3aa19ecef3a27aa44bbdb5f54c40d3c5
+  - enabled: 1
+    path: Assets/Scenes/05.Lesson_08.unity
+    guid: aecc870b498798c4b99ad1aeade85515
+  - enabled: 1
     path: Assets/Scenes/06.Quiz.unity
     guid: b226f4f3b5b2e2447896b7ea10d1a982
   - enabled: 1
     path: Assets/Scenes/99.Loading.unity
     guid: 243b0d0d71149a943aa7991d25efddfa
-  - enabled: 1
-    path: Assets/Scenes/00._Temp.unity
-    guid: 0ba66c3421b399a479b70a06ceae7fb9
   m_configObjects: {}

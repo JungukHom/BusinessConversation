@@ -37,9 +37,9 @@
             backgroundImage = GetComponentInChildren<Image>();
         }
 
-        public static void NotifySceneLoaded()
+        public static void NotifySceneLoaded(Action callback = null)
         {
-            FadeIn();
+            FadeIn(() => { callback?.Invoke(); });
         }
 
         public static void FadeIn(Action callback)

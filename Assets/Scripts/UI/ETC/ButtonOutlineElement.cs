@@ -6,7 +6,7 @@
 
     public class ButtonOutlineElement : MonoBehaviour
     {
-        private Image image;
+        public Image image;
 
         private void Awake()
         {

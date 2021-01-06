@@ -31,6 +31,7 @@
 
         private void Start()
         {
+            Screen.NotifySceneLoaded();
             StartCoroutine(LoadScene());
         }
 
@@ -63,7 +64,12 @@
                     progressText.text = $"{loadingPrecent * 100}%";
                     if (loadingPrecent == 1.0f)
                     {
-                        operation.allowSceneActivation = true;
+                        yield return new WaitForSeconds(1.0f);
+                        Screen.FadeOut(1.0f, 0.0f, () =>
+                        {
+                            operation.allowSceneActivation = true;
+                        });
+
                         yield break;
                     }
                 }
