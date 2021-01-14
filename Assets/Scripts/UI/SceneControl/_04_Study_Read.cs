@@ -55,6 +55,20 @@
 
         private void OnMoveButtonClicked(bool isNext)
         {
+            if (currentIndex == voiceDataList.Count - 1)
+            {
+                MessagePopup.Show("체험방으로 이동합니다.", () =>
+                {
+                    SceneLoader.LoadSceneAsync(SceneName.GetLessonStringWithIndex(PlayingData.selectedLessonIndex));
+                },
+                () =>
+                {
+                    // do nothing
+                });
+
+                return;
+            }
+
             currentIndex += isNext ? 1 : -1;
             currentIndex = Mathf.Clamp(currentIndex, 0, voiceDataList.Count - 1);
             InvalidateTextData();
@@ -75,6 +89,8 @@
             txt_chinese.text = voiceDataList[currentIndex].chinese;
             txt_pinyin.text = voiceDataList[currentIndex].pinyin;
             txt_korean.text = voiceDataList[currentIndex].korean;
+
+            OnPlayButtonClicked();
         }
     }
 }

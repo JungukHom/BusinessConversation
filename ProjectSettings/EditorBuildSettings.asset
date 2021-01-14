@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: b20f5e7eb4003944fb705b2d6a4a4144
   - enabled: 1
     path: Assets/Scenes/04.Study_Read.unity
-    guid: b6fa4f0069a0727488f218ac79c23a81
+    guid: ae5797d888c589142a8dbdfbae8845d0
   - enabled: 1
     path: Assets/Scenes/05.Lesson_01.unity
     guid: 1cb75d595f0aec640b98fbb25a4cc883
@@ -46,7 +46,10 @@ EditorBuildSettings:
     guid: aecc870b498798c4b99ad1aeade85515
   - enabled: 1
     path: Assets/Scenes/06.Quiz.unity
-    guid: b226f4f3b5b2e2447896b7ea10d1a982
+    guid: 17a431e2ade6dbd40aa14d0dcdcafe5d
+  - enabled: 1
+    path: Assets/Scenes/07.Scoring.unity
+    guid: 41c075064f93e104da918464189fdeee
   - enabled: 1
     path: Assets/Scenes/99.Loading.unity
     guid: 243b0d0d71149a943aa7991d25efddfa

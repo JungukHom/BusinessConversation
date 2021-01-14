@@ -12,7 +12,7 @@
     {
         public Button[] buttonGroup;
 
-        private List<ButtonOutlineElement> outlineGroup;
+        [HideInInspector] public List<ButtonOutlineElement> outlineGroup;
 
         private void Start()
         {
@@ -22,7 +22,7 @@
 
         private void SetListeners()
         {
-            foreach(Button button in buttonGroup)
+            foreach (Button button in buttonGroup)
             {
                 button.onClick.AddListener(() =>
                 {
@@ -53,7 +53,7 @@
 
         private void NotifyToAllOutline(Action<ButtonOutlineElement> action)
         {
-            foreach(ButtonOutlineElement button in outlineGroup)
+            foreach (ButtonOutlineElement button in outlineGroup)
             {
                 action?.Invoke(button);
             }

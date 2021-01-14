@@ -25,6 +25,7 @@
         public static readonly string _05_Lesson_08 = "05.Lesson_08";
 
         public static readonly string _06_Quiz = "06.Quiz";
+        public static readonly string _07_Scoring = "07.Scoring";
 
         public static readonly string _99_Loading = "99.Loading";
 
