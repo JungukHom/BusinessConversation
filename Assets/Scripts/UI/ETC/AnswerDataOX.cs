@@ -15,7 +15,7 @@
         public string question;
         public string explain;
 
-        public int answerIndex;
+        public string answerIndex;
         public string commentary;
     }
 }

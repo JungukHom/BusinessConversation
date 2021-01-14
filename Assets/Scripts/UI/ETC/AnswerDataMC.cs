@@ -20,7 +20,7 @@
         public string choice_03;
         public string choice_04;
 
-        public int answerIndex;
+        public string answerIndex;
         public string commentary;
     }
 }

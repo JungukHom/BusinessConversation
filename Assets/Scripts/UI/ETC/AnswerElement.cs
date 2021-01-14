@@ -16,9 +16,12 @@
         public Button btn_wrapperButton;
         public Text txt_answer;
 
-        public AnswerPopup pnl_answerPoup;
+        public AnswerPopup pnl_answerPopup;
 
-        private AnswerData answerData;
+        private AnswerDataOX answerDataOX;
+        private AnswerDataMC answerDataMC;
+
+        private int currentIndex = -1;
 
         private void Awake()
         {
@@ -52,8 +55,8 @@
 
         private void OnWrapperButtonClicked()
         {
-            pnl_answerPoup.Show();
-            pnl_ansewrPopup.InitializeWith(answerData);
+            pnl_answerPopup.Show();
+            pnl_answerPopup.InitializeWith(currentIndex < 3 ? answerDataOX : answerDataMC);
         }
     }
 }
