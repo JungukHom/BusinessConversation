@@ -47,49 +47,12 @@
             {
                 if (i <= 2)
                 {
-                    if (quizPlayData.GetChoice(i) == int.Parse(holderOX[i].answer))
-                    {
-                        answerElements[i].InitializeWith(new AnswerDataOX()
-                        {
-                            question = holderOX[i].question,
-                            explain = holderOX[i].explain,
-                            correctAnswer = holderOX[i].answer,
-                            commentary = holderOX[i].commentary
-                        });
-                    }
-                }
-                else if (i >= 3 && i < 10)
-                {
-                    answerElements[i].InitializeWith(new AnswerDataMC()
-                    {
-                        question = holderMC[i].question,
-                        explain = holderMC[i].explain,
-                        choice_01 = holderMC[i].choice_01,
-                        choice_02 = holderMC[i].choice_02,
-                        choice_03 = holderMC[i].choice_03,
-                        choice_04 = holderMC[i].choice_04,
-                        correctAnswer = holderMC[i].answer,
-                        commentary = holderMC[i].commentary
-                    });
-                }
-                else
-                {
-                    // do nothing
-                }
-            }
-        }
-
-        private void OnAnswerElementButtonClicked()
-        {
-            // TODO : i < 10 하드코딩되어있는부분 수정
-            for (int i = 0; i < 10; i++)
-            {
-                if (i < 3)
-                {
                     answerElements[i].InitializeWith(new AnswerDataOX()
                     {
+                        number = i,
                         question = holderOX[i].question,
                         explain = holderOX[i].explain,
+                        playerAnswer = quizPlayData.GetChoice(i) == 0 ? "O" : "X",
                         correctAnswer = holderOX[i].answer,
                         commentary = holderOX[i].commentary
                     });
@@ -98,14 +61,16 @@
                 {
                     answerElements[i].InitializeWith(new AnswerDataMC()
                     {
-                        question = holderMC[i].question,
-                        explain = holderMC[i].explain,
-                        choice_01 = holderMC[i].choice_01,
-                        choice_02 = holderMC[i].choice_02,
-                        choice_03 = holderMC[i].choice_03,
-                        choice_04 = holderMC[i].choice_04,
-                        correctAnswer = holderMC[i].answer,
-                        commentary = holderMC[i].commentary
+                        number = i,
+                        question = holderMC[i - 3].question,
+                        explain = holderMC[i - 3].explain,
+                        choice_01 = holderMC[i - 3].choice_01,
+                        choice_02 = holderMC[i - 3].choice_02,
+                        choice_03 = holderMC[i - 3].choice_03,
+                        choice_04 = holderMC[i - 3].choice_04,
+                        playerAnswer = holderMC[i - 3].GetChoiceStringWithIndex(quizPlayData.GetChoice(i)),
+                        correctAnswer = holderMC[i - 3].answer,
+                        commentary = holderMC[i - 3].commentary
                     });
                 }
                 else

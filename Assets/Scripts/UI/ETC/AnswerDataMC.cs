@@ -12,6 +12,8 @@
 
     public class AnswerDataMC
     {
+        public int number;
+
         public string question;
         public string explain;
 

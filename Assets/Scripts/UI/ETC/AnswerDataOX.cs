@@ -12,6 +12,7 @@
 
     public class AnswerDataOX
     {
+        public int number;
         public string question;
         public string explain;
 

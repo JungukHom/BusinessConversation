@@ -34,5 +34,22 @@
             this.answer = answer;
             this.commentary = commentary;
         }
+
+        public string GetChoiceStringWithIndex(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    return choice_01;
+                case 1:
+                    return choice_02;
+                case 2:
+                    return choice_03;
+                case 3:
+                    return choice_04;
+                default:
+                    return string.Empty;
+            }
+        }
     }
 }

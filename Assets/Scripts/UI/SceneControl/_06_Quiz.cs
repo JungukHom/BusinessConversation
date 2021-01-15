@@ -164,8 +164,6 @@
 
             ToggleOXorMCUI(false);
 
-            Debug.Log($"currentIndex : {currentIndex}");
-
             CSVQuizMCDataHolder holder = listMC[currentIndex - listOX.Count];
             txt_question.text = holder.question;
             txt_explain.text = holder.explain;

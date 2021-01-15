@@ -38,12 +38,18 @@
 
         public void InitializeWith(AnswerDataOX data)
         {
+            this.answerDataOX = data;
 
+            SetAnswerText(data.playerAnswer);
+            SetListeners();
         }
 
         public void InitializeWith(AnswerDataMC data)
         {
+            this.answerDataMC = data;
 
+            SetAnswerText(data.playerAnswer);
+            SetListeners();
         }
 
         private void SetListeners()
@@ -58,16 +64,31 @@
 
         private void OnWrapperButtonClicked()
         {
-            pnl_answerPopup.Show();
             bool isOX = currentIndex < 3;
+
+            if (pnl_answerPopup == null)
+            {
+                Debug.Log("null pnl_answerPopup");
+            }
+
+            if (answerDataOX == null)
+            {
+                Debug.Log("null answerDataOX");
+            }
+
+            if (answerDataMC == null)
+            {
+                Debug.Log("null answerDataMC");
+            }
+
+            pnl_answerPopup.gameObject.SetActive(true);
+
             if (isOX)
-            {
                 pnl_answerPopup.InitializeWith(answerDataOX);
-            }
             else
-            {
                 pnl_answerPopup.InitializeWith(answerDataMC);
-            }
+
+            
         }
     }
 }

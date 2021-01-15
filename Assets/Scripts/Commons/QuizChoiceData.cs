@@ -11,9 +11,10 @@
 
         public static QuizChoiceData GetOrCreate() => _instance ?? (_instance = new QuizChoiceData());
 
-        //////////////////////////////////////////////////
+        ////////////////////////////////////////////////// 0 = "O" | 1 = "X"
 
-        private Dictionary<int, int> answers = new Dictionary<int, int>();
+        // TODO : change this private
+        public Dictionary<int, int> answers = new Dictionary<int, int>();
 
         public void EditChoice(int key, int value)
         {
