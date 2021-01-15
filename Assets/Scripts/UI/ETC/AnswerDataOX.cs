@@ -15,7 +15,8 @@
         public string question;
         public string explain;
 
-        public string answerIndex;
+        public string playerAnswer;
+        public string correctAnswer;
         public string commentary;
     }
 }

@@ -20,7 +20,8 @@
         public string choice_03;
         public string choice_04;
 
-        public string answerIndex;
+        public string playerAnswer;
+        public string correctAnswer;
         public string commentary;
     }
 }

@@ -18,6 +18,9 @@
 
         public AnswerPopup pnl_answerPopup;
 
+        public Sprite sprite_o;
+        public Sprite sprite_x;
+
         private AnswerDataOX answerDataOX;
         private AnswerDataMC answerDataMC;
 
@@ -56,7 +59,15 @@
         private void OnWrapperButtonClicked()
         {
             pnl_answerPopup.Show();
-            pnl_answerPopup.InitializeWith(currentIndex < 3 ? answerDataOX : answerDataMC);
+            bool isOX = currentIndex < 3;
+            if (isOX)
+            {
+                pnl_answerPopup.InitializeWith(answerDataOX);
+            }
+            else
+            {
+                pnl_answerPopup.InitializeWith(answerDataMC);
+            }
         }
     }
 }

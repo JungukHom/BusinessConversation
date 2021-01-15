@@ -15,6 +15,7 @@
     {
         public Text txt_number;
         public Text txt_question;
+        public Text txt_explain;
         public Text txt_commentary;
 
         public Transform pnl_ox;
@@ -24,6 +25,9 @@
         public Text txt_choice_02;
         public Text txt_choice_03;
         public Text txt_choice_04;
+
+        public Image[] img_ox_array;
+        public Image[] img_mc_array;
 
         protected new void Awake()
         {
@@ -53,7 +57,7 @@
 
         public void InitializeWith(AnswerDataOX data)
         {
-
+            txt_number.text = data.correctAnswer;
         }
         public void InitializeWith(AnswerDataMC data)
         {

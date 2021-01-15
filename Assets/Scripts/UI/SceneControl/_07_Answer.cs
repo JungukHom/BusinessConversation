@@ -22,17 +22,13 @@
 
         private void Awake()
         {
-            FindComponents();
             Initialize();
-        }
-
-        private void FindComponents()
-        {
-            
         }
 
         private void Initialize()
         {
+            //Screen.NotifySceneLoaded();
+
             LoadAnswerData();
             RegisterAnswerData();
         }
@@ -45,6 +41,46 @@
 
         private void RegisterAnswerData()
         {
+            QuizChoiceData quizPlayData = QuizChoiceData.GetOrCreate();
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i <= 2)
+                {
+                    if (quizPlayData.GetChoice(i) == int.Parse(holderOX[i].answer))
+                    {
+                        answerElements[i].InitializeWith(new AnswerDataOX()
+                        {
+                            question = holderOX[i].question,
+                            explain = holderOX[i].explain,
+                            correctAnswer = holderOX[i].answer,
+                            commentary = holderOX[i].commentary
+                        });
+                    }
+                }
+                else if (i >= 3 && i < 10)
+                {
+                    answerElements[i].InitializeWith(new AnswerDataMC()
+                    {
+                        question = holderMC[i].question,
+                        explain = holderMC[i].explain,
+                        choice_01 = holderMC[i].choice_01,
+                        choice_02 = holderMC[i].choice_02,
+                        choice_03 = holderMC[i].choice_03,
+                        choice_04 = holderMC[i].choice_04,
+                        correctAnswer = holderMC[i].answer,
+                        commentary = holderMC[i].commentary
+                    });
+                }
+                else
+                {
+                    // do nothing
+                }
+            }
+        }
+
+        private void OnAnswerElementButtonClicked()
+        {
             // TODO : i < 10 하드코딩되어있는부분 수정
             for (int i = 0; i < 10; i++)
             {
@@ -54,7 +90,7 @@
                     {
                         question = holderOX[i].question,
                         explain = holderOX[i].explain,
-                        answerIndex = holderOX[i].answer,
+                        correctAnswer = holderOX[i].answer,
                         commentary = holderOX[i].commentary
                     });
                 }
@@ -68,7 +104,7 @@
                         choice_02 = holderMC[i].choice_02,
                         choice_03 = holderMC[i].choice_03,
                         choice_04 = holderMC[i].choice_04,
-                        answerIndex = holderMC[i].answer,
+                        correctAnswer = holderMC[i].answer,
                         commentary = holderMC[i].commentary
                     });
                 }
