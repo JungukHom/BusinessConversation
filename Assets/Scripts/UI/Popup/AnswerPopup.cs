@@ -76,7 +76,8 @@
             pnl_ox.gameObject.SetActive(true);
             pnl_mc.gameObject.SetActive(false);
 
-            EnableOutline(int.Parse(data.playerAnswer));
+            Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
+            //EnableOutline(int.Parse(data.playerAnswer));
         }
         public void InitializeWith(AnswerDataMC data)
         {
@@ -102,7 +103,8 @@
             pnl_ox.gameObject.SetActive(true);
             pnl_mc.gameObject.SetActive(false);
 
-            EnableOutline(int.Parse(data.playerAnswer));
+            Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
+            //EnableOutline(int.Parse(data.playerAnswer));
         }
 
         private void EnableOutline(int index)

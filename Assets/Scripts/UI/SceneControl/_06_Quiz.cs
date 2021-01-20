@@ -95,8 +95,6 @@
             currentIndex += isNext ? 1 : -1;
             currentIndex = Mathf.Clamp(currentIndex, 0, 10);
 
-            Debug.Log($"currentIndex : {currentIndex}");
-
             oxGroup.DisableAllOutlines();
             mcGroup.DisableAllOutlines();
 
