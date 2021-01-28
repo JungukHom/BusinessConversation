@@ -407,6 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 95874659}
   txt_answer: {fileID: 1631709142}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -1498,6 +1499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 406044984}
   txt_answer: {fileID: 1855926146}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -3416,6 +3418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 817073970}
   txt_answer: {fileID: 1125600617}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -3634,7 +3637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &885594438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3651,10 +3654,10 @@ RectTransform:
   m_Father: {fileID: 811066168}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -5000}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &885594439
 CanvasRenderer:
@@ -4357,6 +4360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 1026517598}
   txt_answer: {fileID: 342079469}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -5410,6 +5414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 1766968079}
   txt_answer: {fileID: 701663507}
+  pnl_answerPopup_go: {fileID: 0}
   pnl_answerPopup: {fileID: 0}
   sprite_o: {fileID: 0}
   sprite_x: {fileID: 0}
@@ -5780,6 +5785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 1454592230}
   txt_answer: {fileID: 501265632}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -5918,6 +5924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 1456630962}
   txt_answer: {fileID: 304623521}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -6569,6 +6576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 1643722843}
   txt_answer: {fileID: 36730733}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -7361,6 +7369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 1766968079}
   txt_answer: {fileID: 701663507}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -7851,6 +7860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 1968425724}
   txt_answer: {fileID: 1381440885}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}
@@ -8067,6 +8077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_wrapperButton: {fileID: 2039617339}
   txt_answer: {fileID: 507632256}
+  pnl_answerPopup_go: {fileID: 885594437}
   pnl_answerPopup: {fileID: 885594440}
   sprite_o: {fileID: 21300000, guid: 9144f5545e3c05f40a03847bee3ba052, type: 3}
   sprite_x: {fileID: 21300000, guid: 0831461ed8047b44184847d504ca687b, type: 3}

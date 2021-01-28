@@ -82,7 +82,7 @@
             {
                 MessagePopup.Show("퀴즈가 종료되었습니다.\n채점하시겠습니까?", () =>
                 {
-                    SceneLoader.LoadScene(SceneName._07_Scoring);
+                    SceneLoader.LoadScene(SceneName._07_Answer);
                 },
                 () =>
                 {

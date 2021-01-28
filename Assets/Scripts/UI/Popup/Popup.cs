@@ -24,8 +24,8 @@
 
         protected void SetListeners()
         {
-            btn_backgroundPannel.onClick.AddListener(() => OnCloseButtonClicked());
-            btn_close.onClick.AddListener(() => OnBackgroundButtonClicked());
+            btn_close.onClick.AddListener(() => OnCloseButtonClicked());
+            btn_backgroundPannel.onClick.AddListener(() => OnBackgroundButtonClicked());
         }
 
         protected void SetSortingLayerToHighest()

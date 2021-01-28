@@ -33,32 +33,44 @@
 
         protected new void Awake()
         {
-            base.Awake();
-            Initialize();
-        }
-
-        protected new void Initialize()
-        {
-            base.Initialize();
+            SetListeners();
         }
 
         protected new void SetListeners()
         {
-            base.SetListeners();
+            //base.SetListeners();
+            btn_close.onClick.AddListener(() => OnCloseButtonClicked());
+            btn_backgroundPannel.onClick.AddListener(() => OnBackgroundButtonClicked());
         }
+
+        protected new void OnCloseButtonClicked()
+        {
+            Close();
+        }
+
+        protected new void OnBackgroundButtonClicked()
+        {
+            if (unhandledAreaSwitcher)
+            {
+                Close();
+            }
+        }
+        
 
         public void Show()
         {
-            this.gameObject.SetActive(true);
+            GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
         }
 
         public void Close()
         {
-            this.gameObject.SetActive(false);
+            GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -5000);
         }
 
         public void InitializeWith(AnswerDataOX data)
         {
+            Show();
+
             isOX = true;
             DisableAllOutlines();
 
@@ -76,11 +88,15 @@
             pnl_ox.gameObject.SetActive(true);
             pnl_mc.gameObject.SetActive(false);
 
-            Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
-            //EnableOutline(int.Parse(data.playerAnswer));
+            //Debug.Log($"playerAnswer : {data.playerAnswer}");
+            //Debug.Log($"playerAnswer type : {data.playerAnswer.GetType()}");
+            //Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
+            EnableOutline(int.Parse(data.playerAnswer));
         }
         public void InitializeWith(AnswerDataMC data)
         {
+            Show();
+
             isOX = false;
             DisableAllOutlines();
 
@@ -103,8 +119,8 @@
             pnl_ox.gameObject.SetActive(true);
             pnl_mc.gameObject.SetActive(false);
 
-            Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
-            //EnableOutline(int.Parse(data.playerAnswer));
+            //Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
+            EnableOutline(int.Parse(data.playerAnswer));
         }
 
         private void EnableOutline(int index)

@@ -26,19 +26,24 @@
 
         private int currentIndex = -1;
 
-        private void Awake()
-        {
-            Initialize();
-        }
+        //private void Start()
+        //{
+        //    Initialize();
+        //}
 
-        private void Initialize()
-        {
-            SetListeners();
-        }
+        //private void Initialize()
+        //{
+        //    SetListeners();
+        //}
 
         public void InitializeWith(AnswerDataOX data)
         {
             this.answerDataOX = data;
+
+            if (answerDataOX == null)
+            {
+                Debug.Log("null answerDataOX");
+            }
 
             SetAnswerText(data.playerAnswer);
             SetListeners();
@@ -47,6 +52,11 @@
         public void InitializeWith(AnswerDataMC data)
         {
             this.answerDataMC = data;
+
+            if (answerDataMC == null)
+            {
+                Debug.Log("null answerDataMC");
+            }
 
             SetAnswerText(data.playerAnswer);
             SetListeners();
@@ -66,11 +76,6 @@
         {
             bool isOX = currentIndex < 3;
 
-            if (pnl_answerPopup == null)
-            {
-                Debug.Log("null pnl_answerPopup");
-            }
-
             if (answerDataOX == null)
             {
                 Debug.Log("null answerDataOX");
@@ -80,15 +85,21 @@
             {
                 Debug.Log("null answerDataMC");
             }
-
-            pnl_answerPopup.gameObject.SetActive(true);
+            
+            if (GetAnswerPopup() == null)
+            {
+                Debug.Log("null GetAnswerPopup");
+            }
 
             if (isOX)
-                pnl_answerPopup.InitializeWith(answerDataOX);
+                GetAnswerPopup().InitializeWith(answerDataOX);
             else
-                pnl_answerPopup.InitializeWith(answerDataMC);
+                GetAnswerPopup().InitializeWith(answerDataMC);
+        }
 
-            
+        private AnswerPopup GetAnswerPopup()
+        {
+            return this.pnl_answerPopup;
         }
     }
 }
