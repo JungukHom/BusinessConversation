@@ -74,6 +74,15 @@
             isOX = true;
             DisableAllOutlines();
 
+            if (data == null)
+            {
+                Debug.Log($"data is null");
+            }
+            else
+            {
+                Debug.Log($"data not null");
+            }
+
             string number = "0" + (data.number + 1);
             if (data.number == 9)
             {
