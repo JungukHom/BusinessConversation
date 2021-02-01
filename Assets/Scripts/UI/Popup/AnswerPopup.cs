@@ -20,6 +20,8 @@
 
         public Transform pnl_ox;
 
+        public Button btn_play;
+
         public Transform pnl_mc;
         public Text txt_choice_01;
         public Text txt_choice_02;
@@ -29,11 +31,16 @@
         public Image[] img_ox_array;
         public Image[] img_mc_array;
 
+        private List<CSVQuizOXDataHolder> listOX;
+
         private bool isOX = true;
 
         protected new void Awake()
         {
             SetListeners();
+
+            listOX = CSVQuizOXDataContainer.GetOrCreateInstance().GetData(ELocation.Hotel,
+                        (EHotelLesson)PlayingData.selectedLessonIndex);
         }
 
         protected new void SetListeners()
@@ -55,7 +62,7 @@
                 Close();
             }
         }
-        
+
 
         public void Show()
         {
@@ -74,15 +81,6 @@
             isOX = true;
             DisableAllOutlines();
 
-            if (data == null)
-            {
-                Debug.Log($"data is null");
-            }
-            else
-            {
-                Debug.Log($"data not null");
-            }
-
             string number = "0" + (data.number + 1);
             if (data.number == 9)
             {
@@ -97,10 +95,11 @@
             pnl_ox.gameObject.SetActive(true);
             pnl_mc.gameObject.SetActive(false);
 
-            //Debug.Log($"playerAnswer : {data.playerAnswer}");
-            //Debug.Log($"playerAnswer type : {data.playerAnswer.GetType()}");
-            //Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
-            EnableOutline(int.Parse(data.playerAnswer));
+            int playerAnswerIndex = data.playerAnswer == "O" ? 0 : 1;
+            EnableOutline(playerAnswerIndex);
+
+            int answer = data.correctAnswer == "O" ? 0 : 1;
+            btn_play.onClick.AddListener(() => { OnPlayButtonClicked(answer); });
         }
         public void InitializeWith(AnswerDataMC data)
         {
@@ -125,11 +124,10 @@
             txt_choice_03.text = data.choice_03;
             txt_choice_04.text = data.choice_04;
 
-            pnl_ox.gameObject.SetActive(true);
-            pnl_mc.gameObject.SetActive(false);
+            pnl_ox.gameObject.SetActive(false);
+            pnl_mc.gameObject.SetActive(true);
 
-            //Debug.Log($"playerAnswer : {int.Parse(data.playerAnswer)}");
-            EnableOutline(int.Parse(data.playerAnswer));
+            EnableOutline(int.Parse(data.correctAnswer));
         }
 
         private void EnableOutline(int index)
@@ -142,7 +140,7 @@
 
         private void DisableAllOutlines()
         {
-            foreach(Image element in img_ox_array)
+            foreach (Image element in img_ox_array)
             {
                 Color color = element.color;
                 color.a = 0;
@@ -155,6 +153,12 @@
                 color.a = 0;
                 element.color = color;
             }
+        }
+
+        private void OnPlayButtonClicked(int answerIndex)
+        {
+            AudioClip clip = Resources.Load(listOX[answerIndex].GetVoiceFilePath()) as AudioClip;
+            Sound.GetOrCreate().PlayVoiceSound(clip);
         }
     }
 }

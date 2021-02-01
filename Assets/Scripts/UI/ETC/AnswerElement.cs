@@ -18,6 +18,7 @@
 
         public AnswerPopup pnl_answerPopup;
 
+        public Image img_ox;
         public Sprite sprite_o;
         public Sprite sprite_x;
 
@@ -39,27 +40,24 @@
         public void InitializeWith(AnswerDataOX data)
         {
             this.answerDataOX = data;
-
-            if (answerDataOX == null)
-            {
-                Debug.Log("null answerDataOX");
-            }
+            currentIndex = data.number;
 
             SetAnswerText(data.playerAnswer);
             SetListeners();
+
+            int intPlayerAnswer = data.playerAnswer == "O" ? 0 : 1;
+            int intCorrectAnswer = data.correctAnswer == "O" ? 0 : 1;
+            ChangeOXImage(intPlayerAnswer, intCorrectAnswer);
         }
 
         public void InitializeWith(AnswerDataMC data)
         {
             this.answerDataMC = data;
+            currentIndex = data.number;
 
-            if (answerDataMC == null)
-            {
-                Debug.Log("null answerDataMC");
-            }
-
-            SetAnswerText(data.playerAnswer);
+            SetAnswerText(data.playerAnswerString);
             SetListeners();
+            ChangeOXImage(int.Parse(data.playerAnswer), int.Parse(data.correctAnswer));
         }
 
         private void SetListeners()
@@ -76,21 +74,6 @@
         {
             bool isOX = currentIndex < 3;
 
-            if (answerDataOX == null)
-            {
-                Debug.Log("null answerDataOX");
-            }
-
-            if (answerDataMC == null)
-            {
-                Debug.Log("null answerDataMC");
-            }
-            
-            if (GetAnswerPopup() == null)
-            {
-                Debug.Log("null GetAnswerPopup");
-            }
-
             if (isOX)
                 GetAnswerPopup().InitializeWith(answerDataOX);
             else
@@ -100,6 +83,18 @@
         private AnswerPopup GetAnswerPopup()
         {
             return this.pnl_answerPopup;
+        }
+
+        private void ChangeOXImage(int playerAnswer, int correctAnswer)
+        {
+            if (playerAnswer == correctAnswer)
+            {
+                img_ox.sprite = sprite_o;
+            }
+            else
+            {
+                img_ox.sprite = sprite_x;
+            }
         }
     }
 }

@@ -20,18 +20,6 @@
         {
             List<Dictionary<string, object>> dataList = CSVReader.Read("Datas/db_quiz_mc");
 
-            //// TODO : Delete debugging log
-            //for (int i = 0; i < dataList.Count; i++)
-            //{
-            //    Dictionary<string, object> dic = dataList[i];
-            //    string temp = $"{i} ->\n";
-            //    foreach (KeyValuePair<string, object> pair in dic)
-            //    {
-            //        temp += $"{pair.Key.ToString()} : {pair.Value.ToString()}\n";
-            //    }
-            //    Debug.Log(temp);
-            //}
-
             for (int i = 0; i < 98; i++)
             {
                 try
@@ -60,7 +48,6 @@
                 }
                 catch
                 {
-                    Debug.Log($"Error at i : {i}");
                     break;
                 }
             }

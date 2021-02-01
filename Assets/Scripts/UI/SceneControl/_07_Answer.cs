@@ -23,6 +23,7 @@
         private void Awake()
         {
             Initialize();
+            SetListeners();
         }
 
         private void Initialize()
@@ -31,6 +32,11 @@
 
             LoadAnswerData();
             RegisterAnswerData();
+        }
+
+        private void SetListeners()
+        {
+            exitButton.onClick.AddListener(() => { OnExitButtonClicked(); });
         }
 
         private void LoadAnswerData()
@@ -52,8 +58,7 @@
                         number = i,
                         question = holderOX[i].question,
                         explain = holderOX[i].explain,
-                        playerAnswer = quizPlayData.GetChoice(i).ToString(),
-                        //playerAnswer = quizPlayData.GetChoice(i) == 0 ? "O" : "X",
+                        playerAnswer = quizPlayData.GetChoice(i) == 0 ? "O" : "X",
                         correctAnswer = holderOX[i].answer,
                         commentary = holderOX[i].commentary
                     });
@@ -69,8 +74,8 @@
                         choice_02 = holderMC[i - 3].choice_02,
                         choice_03 = holderMC[i - 3].choice_03,
                         choice_04 = holderMC[i - 3].choice_04,
-                        //playerAnswer = holderMC[i - 3].GetChoiceStringWithIndex(quizPlayData.GetChoice(i)),
                         playerAnswer = quizPlayData.GetChoice(i).ToString(),
+                        playerAnswerString = holderMC[i - 3].GetChoiceStringWithIndex(quizPlayData.GetChoice(i)),
                         correctAnswer = holderMC[i - 3].answer,
                         commentary = holderMC[i - 3].commentary
                     });
@@ -80,6 +85,14 @@
                     // do nothing
                 }
             }
+        }
+
+        private void OnExitButtonClicked()
+        {
+            Screen.FadeOut(() =>
+            {
+                SceneLoader.LoadScene(SceneName._02_Menu);
+            });
         }
     }
 }

@@ -23,7 +23,9 @@
         public string choice_04;
 
         public string playerAnswer;
+        public string playerAnswerString;
         public string correctAnswer;
         public string commentary;
+
     }
 }

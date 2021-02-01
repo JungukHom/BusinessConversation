@@ -2,7 +2,7 @@
 {
     public class CSVQuizOXDataHolder
     {
-        private static readonly string VoiceFileDefaultPath = "Record";
+        private static readonly string VoiceFileDefaultPath = "Datas/Record";
 
         public readonly string location = "Location";     // 장소 (호텔, 공항)
         public readonly string lesson = "Lesson";         // 레슨
