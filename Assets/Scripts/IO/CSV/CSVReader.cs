@@ -1,4 +1,4 @@
-﻿namespace BusinessConversation.CHN.Hotel
+﻿namespace BusinessConversation
 {
     // C#
     using System.Collections.Generic;
@@ -7,7 +7,7 @@
     // Unity
     using UnityEngine;
 
-    public class CSVReader
+    public class CSVReader : MonoBehaviour
     {
         private static readonly string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
         private static readonly string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";

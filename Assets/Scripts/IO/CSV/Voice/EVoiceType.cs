@@ -1,4 +1,4 @@
-﻿namespace BusinessConversation.CHN.Hotel
+﻿namespace BusinessConversation
 {
     public enum EVoiceType
     {

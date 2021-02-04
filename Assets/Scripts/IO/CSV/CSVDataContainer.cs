@@ -1,12 +1,7 @@
-﻿namespace BusinessConversation.CHN.Hotel
+﻿namespace BusinessConversation
 {
     public class CSVDataContainer
     {
-        protected CSVDataContainer()
-        {
-            // empty constructor
-        }
-
         protected string GetStringLocation(ELocation location)
         {
             switch (location)

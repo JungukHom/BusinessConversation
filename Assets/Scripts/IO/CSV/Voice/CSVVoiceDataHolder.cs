@@ -1,8 +1,8 @@
-﻿namespace BusinessConversation.CHN.Hotel
+﻿namespace BusinessConversation
 {
     public class CSVVoiceDataHolder
     {
-        private static readonly string VoiceFileDefaultPath = "Datas/Record";
+        private static readonly string VoiceFileDefaultPath = "Record";
 
         public readonly string location = "";
         public readonly string lesson = "";

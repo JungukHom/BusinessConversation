@@ -1,10 +1,10 @@
-﻿namespace BusinessConversation.CHN.Hotel
+﻿namespace BusinessConversation
 {
     // C#
     using System.Collections.Generic;
 
     // static
-    using static BusinessConversation.CHN.Hotel.CSVVoiceDataHeader;
+    using static BusinessConversation.CSVVoiceDataHeader;
 
     public class CSVVoiceDataContainer : CSVDataContainer
     {
