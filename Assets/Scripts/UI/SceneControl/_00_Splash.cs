@@ -8,6 +8,11 @@
 
     public class _00_Splash : MonoBehaviour
     {
+        private void Awake()
+        {
+            CursorControl.InvisibleMode();
+        }
+
         private void Start()
         {
             Screen.FadeIn(1.0f, 1.0f, () =>

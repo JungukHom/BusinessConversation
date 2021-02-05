@@ -9,6 +9,8 @@
         public Button btn_start;
         public Button btn_quit;
 
+        public bool isHotel = true;
+
         private void Awake()
         {
             Initialize();
@@ -17,6 +19,8 @@
         private void Initialize()
         {
             Screen.NotifySceneLoaded();
+            CursorControl.VisibleMode();
+
             SetListeners();
         }
 
@@ -30,7 +34,14 @@
         {
             Screen.FadeOut(() =>
             {
-                SceneLoader.LoadScene(SceneName._02_Menu);
+                if (isHotel)
+                {
+                    SceneLoader.LoadScene(SceneName._02_Menu_Hotel);
+                }
+                else
+                {
+                    SceneLoader.LoadScene(SceneName._02_Menu_Airport);
+                }
             });
         }
 

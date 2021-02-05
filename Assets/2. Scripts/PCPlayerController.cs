@@ -30,8 +30,6 @@ public class PCPlayerController : MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 
         StartCoroutine(MouseDown());
-
-        Cursor.visible = false;
     }
 
     void Update()

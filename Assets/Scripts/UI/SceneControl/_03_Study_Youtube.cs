@@ -16,6 +16,7 @@
         private void Initialize()
         {
             Screen.NotifySceneLoaded();
+            CursorControl.VisibleMode();
 
             SetListeners();
         }

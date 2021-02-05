@@ -34,6 +34,8 @@
         private void Initialize()
         {
             Screen.NotifySceneLoaded();
+            CursorControl.VisibleMode();
+
             SetListeners();
 
             LoadVoiceData();
@@ -55,7 +57,7 @@
 
         private void OnMoveButtonClicked(bool isNext)
         {
-            if (currentIndex == voiceDataList.Count - 1)
+            if (isNext && currentIndex == voiceDataList.Count - 1)
             {
                 MessagePopup.Show("체험방으로 이동합니다.", () =>
                 {
@@ -64,6 +66,7 @@
                 () =>
                 {
                     // do nothing
+                    // = null
                 });
 
                 return;
@@ -78,8 +81,24 @@
         {
             CSVVoiceDataContainer container = CSVVoiceDataContainer.GetOrCreateInstance();
 
-            var wordList = CustomList<CSVVoiceDataHolder>.Create(container.GetData(ELocation.Hotel, (EHotelLesson)PlayingData.selectedLessonIndex, EVoiceType.Word));
-            var sentenceList = CustomList<CSVVoiceDataHolder>.Create(container.GetData(ELocation.Hotel, (EHotelLesson)PlayingData.selectedLessonIndex, EVoiceType.Conversation));
+            CustomList<CSVVoiceDataHolder> wordList;
+            CustomList<CSVVoiceDataHolder> sentenceList;
+
+            if (PlayingData.isHotel)
+            {
+                wordList = CustomList<CSVVoiceDataHolder>.Create(container.GetData(ELocation.Hotel,
+                    (EHotelLesson)PlayingData.selectedLessonIndex, EVoiceType.Word));
+                sentenceList = CustomList<CSVVoiceDataHolder>.Create(container.GetData(ELocation.Hotel,
+                    (EHotelLesson)PlayingData.selectedLessonIndex, EVoiceType.Conversation));
+            }
+            else
+            {
+                wordList = CustomList<CSVVoiceDataHolder>.Create(container.GetData(ELocation.Airport,
+                    (EAirportLesson)PlayingData.selectedLessonIndex, EVoiceType.Word));
+                sentenceList = CustomList<CSVVoiceDataHolder>.Create(container.GetData(ELocation.Airport,
+                    (EAirportLesson)PlayingData.selectedLessonIndex, EVoiceType.Conversation));
+            }
+            
 
             voiceDataList = wordList + sentenceList;
         }

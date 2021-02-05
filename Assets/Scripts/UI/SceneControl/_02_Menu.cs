@@ -43,6 +43,7 @@
         private void Initialize()
         {
             Screen.NotifySceneLoaded();
+            CursorControl.VisibleMode();
 
             btn_select_completed.interactable = false;
         }

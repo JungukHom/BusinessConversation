@@ -1,22 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+
+using BusinessConversation.CHN.Hotel;
 
 public class OutPointBox : MonoBehaviour
 {
-    int sceneIndex = 0;
-
     public void TriggerEnter()
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneLoader.LoadScene(SceneName._06_Quiz);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag.Equals("Player"))
         {
-            SceneManager.LoadScene(sceneIndex);
+            BusinessConversation.CHN.Hotel.Screen.FadeOut(() =>
+            {
+                SceneLoader.LoadScene(SceneName._06_Quiz);
+            });
         }
     }
 }

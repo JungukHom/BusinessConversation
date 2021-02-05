@@ -20,13 +20,7 @@
         private void Initialize()
         {
             Screen.NotifySceneLoaded();
-
-            Invoke("MoveScene", 3.0f);
-        }
-
-        private void MoveScene()
-        {
-            SceneLoader.LoadScene(SceneName._06_Quiz);
+            CursorControl.InvisibleMode();
         }
     }
 }

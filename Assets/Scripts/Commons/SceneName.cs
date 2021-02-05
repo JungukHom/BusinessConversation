@@ -11,7 +11,8 @@
     {
         public static readonly string _00_Splash = "00.Splash";
         public static readonly string _01_Title = "01.Title";
-        public static readonly string _02_Menu = "02.Menu";
+        public static readonly string _02_Menu_Hotel = "02.Menu_Hotel";
+        public static readonly string _02_Menu_Airport = "02.Menu_Airport";
         public static readonly string _03_Study_Youtube = "03.Study_Youtube";
         public static readonly string _04_Study_Read = "04.Study_Read";
 

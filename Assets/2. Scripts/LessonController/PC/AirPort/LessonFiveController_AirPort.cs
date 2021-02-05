@@ -10,7 +10,6 @@ public class LessonFiveController_AirPort : GameController
     public GameObject dutyFree;
     private void Start()
     {
-        Cursor.visible = false;
         textUI.SetActive(false);
     }
 

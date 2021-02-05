@@ -36,6 +36,14 @@
             return GetData(_location, _lesson);
         }
 
+        public List<CSVLODataHolder> GetData(ELocation location, EAirportLesson lesson)
+        {
+            string _location = GetStringLocation(location);
+            string _lesson = GetStringLesson(lesson);
+
+            return GetData(_location, _lesson);
+        }
+
         private List<CSVLODataHolder> GetData(string location, string lesson)
         {
             List<CSVLODataHolder> tempList = new List<CSVLODataHolder>();

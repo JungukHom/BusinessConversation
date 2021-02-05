@@ -6,7 +6,7 @@
 
     // Unity
     using UnityEngine;
-    using UnityEngine.UI; 
+    using UnityEngine.UI;
 
     // Project
     // Alias
@@ -24,10 +24,17 @@
 
         private void Initialize()
         {
-            ShowData(PlayingData.selectedLessonIndex);
+            if (PlayingData.isHotel)
+            {
+                ShowDataHotel(PlayingData.selectedLessonIndex);
+            }
+            else
+            {
+                ShowDataAirport(PlayingData.selectedLessonIndex);
+            }
         }
 
-        private void ShowData(int lesson)
+        private void ShowDataHotel(int lesson)
         {
             // TODO : CSV 형태로 변경하기
             // 현재 개발 상 편의 문제로 CSV작업을 거치치 않고 진행. 추후 CSV파일 읽는 방식로 변경할 예정
@@ -75,6 +82,57 @@
                 case 7:
                     korean = "메뉴판 좀 주세요";
                     chinese = "请给我看一下菜单";
+                    break;
+            }
+
+            txt_lesson.text = "0" + (lesson + 1);
+            txt_korean.text = korean;
+            txt_chinese.text = chinese;
+        }
+
+        private void ShowDataAirport(int lesson)
+        {
+            // TODO : CSV 형태로 변경하기
+            // 현재 개발 상 편의 문제로 CSV작업을 거치치 않고 진행. 추후 CSV파일 읽는 방식로 변경할 예정
+
+            string korean = "";
+            string chinese = "";
+
+            switch (lesson)
+            {
+                case 0:
+                    korean = "오전 항공편이 있나요?";
+                    chinese = "有上午的航班吗?";
+                    break;
+
+                case 1:
+                    korean = "창가 쪽 좌석으로 주세요.";
+                    chinese = "请给我靠窗的座位.";
+                    break;
+
+                case 2:
+                    korean = "부칠 수하물이 있습니까?";
+                    chinese = "有要托运的行李吗?";
+                    break;
+
+                case 3:
+                    korean = "검사하게 가방 좀 열어주세요.";
+                    chinese = "请打开一下，我们需要检查.";
+                    break;
+
+                case 4:
+                    korean = "여기서 환전할 수 있나요?";
+                    chinese = "请问这儿可以换钱吗?";
+                    break;
+
+                case 5:
+                    korean = "중국 바이주 몇 병 사려고요.";
+                    chinese = "我想买几瓶中国白酒.";
+                    break;
+
+                case 6:
+                    korean = "제 자리가 어딘가요?";
+                    chinese = "请问我的位置在哪边?";
                     break;
             }
 

@@ -10,7 +10,6 @@ public class LessonEightController : GameController
 
 	private void Start()
 	{
-        Cursor.visible = false;
         textUI.SetActive(false);
     }
 
