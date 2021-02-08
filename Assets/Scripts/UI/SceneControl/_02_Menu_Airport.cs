@@ -97,7 +97,7 @@
                 PlayingData.selectedLessonIndex = selectedLessonIndex;
 
                 if (async)
-                    SceneLoader.LoadSceneAsync(sceneName);p
+                    SceneLoader.LoadSceneAsync(sceneName);
                 else
                     SceneLoader.LoadScene(sceneName);
             });
