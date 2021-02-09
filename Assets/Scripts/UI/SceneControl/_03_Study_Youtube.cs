@@ -8,6 +8,9 @@
     {
         public Button btn_next;
 
+        public YoutubeSettings youtubeSettings;
+        public RawImage videoRenderer;
+
         private void Awake()
         {
             Initialize();
@@ -32,6 +35,20 @@
             {
                 SceneLoader.LoadScene(SceneName._04_Study_Read);
             });
+        }
+
+        public void SkipTime(float time) {
+            youtubeSettings.videoPlayer.time += time;
+            youtubeSettings.audioPlayer.time += time;
+        }
+
+        public void VideoStop() {
+            youtubeSettings.Seek(0);
+            videoRenderer.color = Color.black;
+        }
+
+        public void PlayVideoColorSet() {
+            videoRenderer.color = Color.white;
         }
     }
 }
