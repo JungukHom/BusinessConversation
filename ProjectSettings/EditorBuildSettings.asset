@@ -24,29 +24,23 @@ EditorBuildSettings:
     path: Assets/Scenes/04.Study_Read.unity
     guid: ae5797d888c589142a8dbdfbae8845d0
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_01.unity
-    guid: 55598220847012043ae8d324d210116b
+    path: Assets/4. Scenes/AirPort_PC/05.Lesson_01.unity
+    guid: 51945c168c7c4b9488a89d393dba01b7
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_02.unity
-    guid: e7f52e706cf1abc42a34201e1c4c9ca0
+    path: Assets/4. Scenes/AirPort_PC/05.Lesson_02.unity
+    guid: 3fc736ce2c289a34181b84b23457d535
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_03.unity
-    guid: 080ad8f47fb85854189438fe5003fac4
+    path: Assets/4. Scenes/AirPort_PC/05.Lesson_03.unity
+    guid: 42d8aa0dd6093854f8eb79e583e0ea4b
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_04.unity
-    guid: 77836a121ba7d3f4eaa5af16e4e8275c
+    path: Assets/4. Scenes/AirPort_PC/05.Lesson_04.unity
+    guid: b17b837e19cb69b4ab2c17f69d7a1aed
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_05.unity
-    guid: 236ac039dbfaea647b254e08d053bc95
+    path: Assets/4. Scenes/AirPort_PC/05.Lesson_05.unity
+    guid: 031f18b2ea708b8498f340661719377f
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_06.unity
-    guid: 1ebdf6d485e546e4e979e61110d3f1af
-  - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_07.unity
-    guid: 7d63fd99d2b335540801928d40da1f3c
-  - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_08.unity
-    guid: 57f310f2775de73459ec5cc2725b5003
+    path: Assets/4. Scenes/AirPort_PC/05.Lesson_06.unity
+    guid: c14cf00560d4a0a418ab63967cb7c4c9
   - enabled: 1
     path: Assets/Scenes/06.Quiz.unity
     guid: 17a431e2ade6dbd40aa14d0dcdcafe5d
