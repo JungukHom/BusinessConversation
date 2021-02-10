@@ -880,7 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_start: {fileID: 954741996}
   btn_quit: {fileID: 1013458607}
-  isHotel: 0
+  isHotel: 1
 --- !u!1 &2039542180
 GameObject:
   m_ObjectHideFlags: 0
