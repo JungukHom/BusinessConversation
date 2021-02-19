@@ -9,11 +9,18 @@
         public Button btn_next;
 
         public YoutubeSettings youtubeSettings;
+        public YoutubePlayer youtubePlayer;
         public RawImage videoRenderer;
 
         private void Awake()
         {
             Initialize();
+
+            // Add escpopup event
+            ESCPopup.RegisterEvent(true, () =>
+            {
+                youtubePlayer.Pause();
+            });
         }
 
         private void Initialize()
@@ -23,7 +30,7 @@
 
             SetListeners();
         }
-        
+
         private void SetListeners()
         {
             btn_next.onClick.AddListener(() => { OnNextButtonClicked(); });
@@ -37,17 +44,20 @@
             });
         }
 
-        public void SkipTime(float time) {
+        public void SkipTime(float time)
+        {
             youtubeSettings.videoPlayer.time += time;
             youtubeSettings.audioPlayer.time += time;
         }
 
-        public void VideoStop() {
+        public void VideoStop()
+        {
             youtubeSettings.Seek(0);
             videoRenderer.color = Color.black;
         }
 
-        public void PlayVideoColorSet() {
+        public void PlayVideoColorSet()
+        {
             videoRenderer.color = Color.white;
         }
     }
