@@ -113,7 +113,7 @@
             {
                 // disable camera and player move
                 FindObjectOfType<CameraMove>().enabled = !visibility;
-                FindObjectOfType<PCPlayerController>().enabled = !visibility;
+                //FindObjectOfType<PCPlayerController>().enabled = !visibility;
             }
             catch { }
 
