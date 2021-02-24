@@ -61,6 +61,7 @@
         private new void Initialize()
         {
             SetListeners();
+            //SetESCPopopVisibillity(false);
         }
 
         private new void SetListeners()
@@ -118,8 +119,17 @@
             catch { }
 
             // set cursor state
-            Cursor.visible = visibility;
-            Cursor.lockState = (visibility ? CursorLockMode.None : CursorLockMode.Locked);
+            bool isGameScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("05");
+            if (isGameScene)
+            {
+                Cursor.visible = visibility;
+                Cursor.lockState = (visibility ? CursorLockMode.None : CursorLockMode.Locked);
+            }
+            else
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }            
 
             // set pannel visibility
             pnl_content_esc.SetActive(visibility);
