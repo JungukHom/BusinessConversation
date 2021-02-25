@@ -6,23 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/VR/00.Splash.unity
-    guid: 8370409874c5350459d9ffef2e5ed982
+    path: Assets/Scenes/PC/00.Splash.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/VR/01.Title.unity
-    guid: 03eac9d020431db4ba0296e334dce1b8
+    path: Assets/Scenes/PC/01.Title.unity
+    guid: 2144f30609473124a9a0b2a57108ae38
   - enabled: 1
-    path: Assets/Scenes/VR/02.Menu_Airport.unity
-    guid: 7bb43f1c9d250c24e9a519eaac494f48
+    path: Assets/Scenes/PC/02.Menu_Airport.unity
+    guid: b4f1b147ca3f3314f8176e73d51eb21e
   - enabled: 1
-    path: Assets/Scenes/VR/02.Menu_Hotel.unity
-    guid: cc20ab06007235741bbf0decfd46da6c
+    path: Assets/Scenes/PC/02.Menu_Hotel.unity
+    guid: 4d678e7b2c2a87346a355afb882e3e07
   - enabled: 1
-    path: Assets/Scenes/VR/03.Study_Youtube.unity
-    guid: 33ac87cbe1d06ac4ba71219738685ddc
+    path: Assets/Scenes/PC/03.Study_Youtube.unity
+    guid: b20f5e7eb4003944fb705b2d6a4a4144
   - enabled: 1
-    path: Assets/Scenes/VR/04.Study_Read.unity
-    guid: 23518685657225a43897268d849486b2
+    path: Assets/Scenes/PC/04.Study_Read.unity
+    guid: ae5797d888c589142a8dbdfbae8845d0
   - enabled: 1
     path: Assets/4. Scenes/Hotel_PC/05.Lesson_01.unity
     guid: 55598220847012043ae8d324d210116b
@@ -48,12 +48,12 @@ EditorBuildSettings:
     path: Assets/4. Scenes/Hotel_PC/05.Lesson_08.unity
     guid: 57f310f2775de73459ec5cc2725b5003
   - enabled: 1
-    path: Assets/Scenes/VR/06.Quiz.unity
-    guid: 12761ebbc7bf7a14a9099e876afeec84
+    path: Assets/Scenes/PC/06.Quiz.unity
+    guid: 17a431e2ade6dbd40aa14d0dcdcafe5d
   - enabled: 1
-    path: Assets/Scenes/VR/07.Answer.unity
-    guid: b3279b1ffc12a0d43ab58c8ee8a3775a
+    path: Assets/Scenes/PC/07.Answer.unity
+    guid: 41c075064f93e104da918464189fdeee
   - enabled: 1
-    path: Assets/Scenes/VR/99.Loading.unity
-    guid: 575a2c38a46e2cf4aac9b6cff686082d
+    path: Assets/Scenes/PC/99.Loading.unity
+    guid: 243b0d0d71149a943aa7991d25efddfa
   m_configObjects: {}

@@ -9,8 +9,6 @@
         public Button btn_start;
         public Button btn_quit;
 
-        public bool isHotel = true;
-
         private void Awake()
         {
             Initialize();
@@ -34,14 +32,10 @@
         {
             Screen.FadeOut(() =>
             {
-                if (isHotel)
-                {
+                if (PlayingData.isHotel)
                     SceneLoader.LoadScene(SceneName._02_Menu_Hotel);
-                }
                 else
-                {
                     SceneLoader.LoadScene(SceneName._02_Menu_Airport);
-                }
             });
         }
 

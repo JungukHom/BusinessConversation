@@ -74,7 +74,7 @@
 
         private void OnResumeButtonClicked()
         {
-            pnl_content_esc.SetActive(false);
+            SetESCPopopVisibillity(false);
         }
 
         private void OnRestartButtonClicked()
@@ -104,7 +104,10 @@
         {
             Screen.FadeOut(() =>
             {
-                SceneLoader.LoadScene(SceneName._01_Title);
+                if (PlayingData.isHotel)
+                    SceneLoader.LoadScene(SceneName._02_Menu_Hotel);
+                else
+                    SceneLoader.LoadScene(SceneName._02_Menu_Airport);
             });
         }
 
