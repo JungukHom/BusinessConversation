@@ -24,29 +24,29 @@ EditorBuildSettings:
     path: Assets/Scenes/PC/04.Study_Read.unity
     guid: ae5797d888c589142a8dbdfbae8845d0
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_01.unity
-    guid: 55598220847012043ae8d324d210116b
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_01.unity
+    guid: bdc47a523a669e3458b7a1aee9a674d9
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_02.unity
-    guid: e7f52e706cf1abc42a34201e1c4c9ca0
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_02.unity
+    guid: 47bf65d275d430c48b381c613ad9c34d
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_03.unity
-    guid: 080ad8f47fb85854189438fe5003fac4
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_03.unity
+    guid: dfd7b023254e6264f9c85783c3d37c66
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_04.unity
-    guid: 77836a121ba7d3f4eaa5af16e4e8275c
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_04.unity
+    guid: 8e53ccf69d015974bb63f9c37474daa6
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_05.unity
-    guid: 236ac039dbfaea647b254e08d053bc95
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_05.unity
+    guid: a82fe9fa7fd7a97499407d67636d45ca
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_06.unity
-    guid: 1ebdf6d485e546e4e979e61110d3f1af
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_06.unity
+    guid: d87424efaa065f441bea2a39561bab6f
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_07.unity
-    guid: 7d63fd99d2b335540801928d40da1f3c
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_07.unity
+    guid: 04feb11d75309f748933981671bb4188
   - enabled: 1
-    path: Assets/4. Scenes/Hotel_PC/05.Lesson_08.unity
-    guid: 57f310f2775de73459ec5cc2725b5003
+    path: Assets/4. Scenes/Hotel_VR/05.Lesson_08.unity
+    guid: 4f5439b202f3b9f42a26ee11ad49521e
   - enabled: 1
     path: Assets/Scenes/PC/06.Quiz.unity
     guid: 17a431e2ade6dbd40aa14d0dcdcafe5d
