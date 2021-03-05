@@ -24,6 +24,17 @@
         private void Awake()
         {
             image = GetComponent<Image>();
+
+            try
+            {
+                if (IsLessonSelectButton(gameObject))
+                {
+                    image = transform.GetChild(0).GetComponent<Image>();
+                }
+            }
+            catch { }
+
+            gameObject.tag = "VRButton";
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -43,6 +54,7 @@
 
         public void OnPointerUp(PointerEventData eventData)
         {
+            // to nothing
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -55,6 +67,11 @@
             {
                 pressedObject.GetComponent<Button>().onClick.Invoke();
             }
+        }
+
+        private bool IsLessonSelectButton(GameObject gameObject)
+        {
+            return gameObject.name.Contains("btn_lesson_element");
         }
     }
 }

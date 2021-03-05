@@ -16,6 +16,7 @@
         public Button btn_restart;
         public Button btn_settings;
         public Button btn_stop;
+        public Button btn_quit;
 
         public GameObject pnl_content_esc;
         public GameObject pnl_content_settings;
@@ -70,6 +71,7 @@
             btn_restart.onClick.AddListener(() => { OnRestartButtonClicked(); });
             btn_settings.onClick.AddListener(() => { OnSettingsButtonClicked(); });
             btn_stop.onClick.AddListener(() => { OnStopButtonClicked(); });
+            btn_quit.onClick.AddListener(() => { OnQuitButtonClicked(); });
         }
 
         private void OnResumeButtonClicked()
@@ -109,6 +111,18 @@
                 else
                     SceneLoader.LoadScene(SceneName._02_Menu_Airport);
             });
+        }
+
+        private void OnQuitButtonClicked()
+        {
+            MessagePopup.Show("정말 종료하시겠습니까?",
+                () =>
+                {
+                    Screen.FadeOut(() =>
+                    {
+                        Application.Quit();
+                    });
+                }, null);
         }
 
         private void SetESCPopopVisibillity(bool visibility)

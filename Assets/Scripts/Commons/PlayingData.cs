@@ -12,7 +12,7 @@
 
     public class PlayingData
     {
-        public static bool isHotel = true;
+        public static bool isHotel = false;
         public static int selectedLessonIndex = -1;
     }
 }

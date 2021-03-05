@@ -65,6 +65,8 @@
 
         private void OnLessonButtonClicked(string buttonName)
         {
+            Debug.Log($"button name : {buttonName}");
+
             if (selectedLessonIndex == -1) // if lesson is not selected
             {
                 pnl_explain.gameObject.SetActive(false);
