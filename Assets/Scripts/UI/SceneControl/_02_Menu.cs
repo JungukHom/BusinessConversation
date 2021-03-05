@@ -57,7 +57,8 @@
 
             btn_select_completed.onClick.AddListener(() => { OnSelectCompletedButtonClicked(); });
 
-            btn_learning.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName._03_Study_Youtube); });
+            //btn_learning.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName._03_Study_Youtube); }); // PC
+            btn_learning.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName._04_Study_Read); }); // VR
             btn_experience.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName.GetLessonStringWithIndex(selectedLessonIndex), true); });
             btn_quiz.onClick.AddListener(() => { OnMoveSceneButtonClicked(SceneName._06_Quiz); });
             btn_close_detailSelectPopup.onClick.AddListener(() => { OnDetailSelectPopupCloseButtonClicked(); });

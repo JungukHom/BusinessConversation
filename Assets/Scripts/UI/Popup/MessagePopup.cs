@@ -43,6 +43,13 @@
         {
             base.Initialize();
 
+            //temp: for vr
+            GameObject pr_renderer = GameObject.Find("PR_Renderer");
+            if (pr_renderer != null)
+            {
+                GetComponent<Canvas>().worldCamera = pr_renderer.GetComponent<Camera>();
+            }
+
             SetSortingLayerToHighest();
             SetListeners();
         }

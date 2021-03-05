@@ -62,7 +62,6 @@
             image.color = hoverColor;
 
             GameObject pressedObject = eventData.pointerPressRaycast.gameObject;
-            print(pressedObject.name);
             if (pressedObject && pressedObject.gameObject.CompareTag("VRButton"))
             {
                 pressedObject.GetComponent<Button>().onClick.Invoke();
