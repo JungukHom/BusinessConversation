@@ -1,2 +1,2 @@
 # BusinessConversation
-Chinese Version of BusinessConversation Hotel
+Chinese Version of BusinessConversation
